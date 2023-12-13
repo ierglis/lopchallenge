@@ -1,0 +1,42 @@
+.flexRow--bannersinfocards,
+.flexRow--twobannersblock{
+    margin-top: 30px;
+}
+
+.flexRow--bannersinfocards :global(.vtex-store-components-3-x-container),
+.flexRow--twobannersblock :global(.vtex-store-components-3-x-container){
+    max-width: 1150px;
+    margin: auto;
+    padding: 0;
+}
+
+.flexRowContent--bannersinfocards,
+.flexRow--twobannersblock{
+    justify-content: space-between;
+}
+
+@media (min-width: 1026px){
+    .flexRowContent--twobannersblock{
+        justify-content: space-between;
+    }
+    .flexRowContent--twobannersblock .stretchChildrenWidth{
+        width: 47% !important;
+    }
+}
+
+
+@media (max-width: 1025px){
+    .flexRow--twobannersblock{
+        padding: 0 14px 0 14px;
+    }
+    .flexRowContent--twobannersblock .stretchChildrenWidth:last-child{
+        margin-top: 13px;
+    }
+
+    .flexRowContent--twobannersblock{
+        flex-direction: column;
+    }
+    .flexRowContent--twobannersblock .stretchChildrenWidth{
+        width: 100% !important;
+    }
+}

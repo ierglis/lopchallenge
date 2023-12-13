@@ -1,0 +1,38 @@
+@media (max-width: 1025px){
+    .container :global(.vtex-button){
+        width: 30px;
+        min-height: 30px;
+        display: flex;
+        align-items: center;
+    }
+
+    .container :global(.vtex-button__label){
+        padding: 0 !important;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .label{
+        display: none;
+    }
+}
+
+:global(.vtex-sticky-layout-0-x-wrapper--stuck:not(:hover)) :global(.vtex-flex-layout-0-x-flexRowContent--main-header-mobile){
+    background-color: black;
+}
+
+.container :global(.vtex-button__label)::before {
+    content: '';
+    background-image: url(assets/header/iconuser.svg);
+    width: 25px;
+    height: 25px;
+    display: block;
+    background-position: center;
+    color: white;
+    font-size: 25px;
+    background-repeat: no-repeat;
+}
+
+.label{
+    color: white;
+}

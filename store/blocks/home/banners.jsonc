@@ -1,0 +1,125 @@
+{
+    "responsive-layout.mobile#bannerslider": {
+        "children": [
+            "slider-layout#banners"
+        ]
+    },
+    "responsive-layout.desktop": {
+        "children": [
+            "flex-layout.row#threebanners"
+        ]
+    },
+
+    /* MOBILE */
+
+    "slider-layout#banners": {
+        "title": "Slider Banners",
+        "props": {
+            "itemsPerPage": {
+                "desktop": 1,
+                "tablet": 1,
+                "phone": 1
+            },
+            "infinite": true,
+            "showNavigationArrows": "always",
+            "blockClass": "carousel"
+        },
+        "children": [
+            "info-card#banner1",
+            "info-card#banner2",
+            "info-card#banner3"
+        ]
+    },
+
+    /* DESKTOP */
+
+    "flex-layout.row#threebanners": {
+        "children": [
+            "info-card#banner1",
+            "info-card#banner2",
+            "info-card#banner3"
+        ],
+        "props": {
+            "blockClass": "bannersinfocards"
+        }
+    },
+
+    /* blocks info cards */
+
+    "flex-layout.row#infocardstwobanners":{
+        "children": [
+            "info-card#banner4",
+            "info-card#banner5"
+        ],
+        "props": {
+            "blockClass": "twobannersblock"
+        }
+    },
+
+    "info-card#banner1": {
+        "title": "Banner",
+        "props": {
+            "id": "banners",
+            "isFullModeStyle": false,
+            "textPosition": "center",
+            "imageUrl": "assets/banners/laundry.jpg",
+            "headline": "LOREM IPSUM",
+            "callToActionUrl": "/142?map=productClusterIds",
+            "blockClass": "banners",
+            "textAlignment": "center"
+        }
+    },
+    "info-card#banner2": {
+        "title": "Banner",
+        "props": {
+            "id": "banners",
+            "isFullModeStyle": false,
+            "textPosition": "center",
+            "imageUrl": "assets/banners/tablet-kitchen.jpg",
+            "headline": "LOREM IPSUM",
+            "callToActionUrl": "/142?map=productClusterIds",
+            "blockClass": "banners",
+            "textAlignment": "center"
+        }
+    },
+    "info-card#banner3": {
+        "title": "Banner",
+        "props": {
+            "id": "banners",
+            "isFullModeStyle": false,
+            "textPosition": "center",
+            "imageUrl": "assets/banners/living.jpg",
+            "headline": "LOREM IPSUM",
+            "callToActionUrl": "/142?map=productClusterIds",
+            "blockClass": "banners",
+            "textAlignment": "center"
+        }
+    },
+
+    "info-card#banner4": {
+        "title": "Banner",
+        "props": {
+            "id": "banners",
+            "isFullModeStyle": false,
+            "textPosition": "center",
+            "imageUrl": "assets/banners/kitchen.jpg",
+            "headline": "LOREM IPSUM",
+            "callToActionUrl": "/exercise",
+            "blockClass": "twobanners",
+            "textAlignment": "center"
+        }
+    },
+    "info-card#banner5": {
+        "title": "Banner",
+        "props": {
+            "id": "banners",
+            "isFullModeStyle": false,
+            "textPosition": "center",
+            "imageUrl": "assets/banners/electronic.jpg",
+            "headline": "LOREM IPSUM",
+            "callToActionUrl": "/exercise",
+            "blockClass": "twobanners",
+            "textAlignment": "center"
+        }
+    }
+}

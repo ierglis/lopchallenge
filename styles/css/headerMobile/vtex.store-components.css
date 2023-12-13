@@ -1,0 +1,59 @@
+.imageElementLink--logo,
+.imageElement--logo{
+    height: 41px;
+    width: 62px;
+}
+
+.imageElementLink--logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0;
+}
+
+@media (max-width: 1025px){
+    .searchBarContainer{
+        padding:0;
+    }
+    .autoCompleteOuterContainer{
+        max-width: 90vw;
+        margin: auto;
+    }
+
+    .autoCompleteOuterContainer :global(.vtex-input-prefix__group),
+    .autoCompleteOuterContainer :global(.vtex-styleguide-9-x-input),
+    .autoCompleteOuterContainer :global(.vtex-input__suffix){
+        border-radius: 0;
+        border-color: black;
+    }
+    .autoCompleteOuterContainer :global(.vtex-styleguide-9-x-input)::placeholder{
+        font-weight: bold;
+        color: black;
+    }
+}
+
+/*desktop */
+
+@media (min-width: 1026px){
+    .searchBarContainer{
+        padding: 19px 0 19px 0;
+        width: 566px;
+        min-width: 500px;
+    }
+
+    .imageElementLink--logo{
+        justify-content: flex-start;
+        margin-left: 20px;
+    }
+
+    .autoCompleteOuterContainer :global(.vtex-input-prefix__group){
+        border-radius: 10px;
+        background: white;
+        border-color: white;
+    }
+    .autoCompleteOuterContainer :global(.vtex-styleguide-9-x-input)::placeholder{
+        font-weight: bold;
+        color: #485A64;
+        letter-spacing: 0;
+    }
+}

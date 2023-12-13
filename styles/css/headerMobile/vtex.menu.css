@@ -1,0 +1,76 @@
+@media (max-width: 1025px) {
+    .menuContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .styledLinkContainer--menuListaCategoryMobile {
+        margin: 0;
+    }
+
+    .menuItem--menuListaCategoryMobile {
+        margin: 6px 0 6px 0;
+    }
+
+    .menuContainerNav--menuListaCategoryMobile {
+        margin-bottom: 20px;
+    }
+
+    .menuContainerNav {
+        width: 100%;
+    }
+
+    .menuContainer :global(.vtex-rich-text-0-x-paragraph--mobilemenutitle) {
+        color: white;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+
+    .styledLinkContent--menuListaCategoryMobile {
+        color: white;
+    }
+}
+
+@media (min-width: 1026px) {
+    .styledLinkContainer {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .styledLinkContent {
+        color: white;
+        letter-spacing: 0.26px;
+        font-size: 13px;
+    }
+
+    .submenuContainer .styledLinkContent {
+        color: black;
+    }
+
+    .submenuContainer .menuItem {
+        margin: 4px 0 4px 0;
+    }
+
+    .menuItem .styledLinkContainer::after {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-right: 2px solid white;
+        border-bottom: 2px solid white;
+        transform: rotate(45deg);
+        margin-left: 6px;
+        position: relative;
+        bottom: 4px;
+    }
+    .menuItem--isOpen .styledLinkContainer::after{
+        transform: rotate(-135deg);
+        bottom: -1px;
+    }
+
+    .submenuWrapper--isOpen{
+        top: 12px;
+        margin-left: 10px;
+    }
+}

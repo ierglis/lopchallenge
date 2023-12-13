@@ -1,0 +1,123 @@
+{
+  "vtex.menu@2.x:menu#category-menu": {
+    "props": {
+      "experimentalOptimizeRendering": true
+    },
+    "children": [
+      "menu-item#category1"
+    ]
+  },
+  "menu-item#category1": {
+    "props": {
+      "id": "Category1",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/tecnologia",
+        "noFollow": false,
+        "tagTitle": "LOREM IPSUM",
+        "text": "LOREM IPSUM"
+      }
+    },
+    "blocks": [
+      "vtex.menu@2.x:submenu#category-apparel"
+    ]
+  },
+  "vtex.menu@2.x:submenu#category-apparel": {
+    "props": {
+      "width": "auto"
+    },
+    "children": [
+      "vtex.menu@2.x:menu#category-apparel"
+    ]
+  },
+  "vtex.menu@2.x:menu#category-apparel": {
+    "props": {
+      "orientation": "vertical"
+    },
+    "children": [
+      "menu-item#category1menu",
+      "menu-item#category2menu",
+      "menu-item#category3menu"
+    ]
+  },
+  "menu-item#category1menu": {
+    "props": {
+      "id": "menu-item1",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/tecnologia",
+        "noFollow": false,
+        "tagTitle": "Lorem Ipsum",
+        "text": "Lorem Ipsum"
+      }
+    }
+  },
+  "menu-item#category2menu": {
+    "props": {
+      "id": "menu-item2",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/tecnologia",
+        "noFollow": false,
+        "tagTitle": "Lorem Ipsum",
+        "text": "Lorem Ipsum"
+      }
+    }
+  },
+  "menu-item#category3menu": {
+    "props": {
+      "id": "menu-item3",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/tecnologia",
+        "noFollow": false,
+        "tagTitle": "Lorem Ipsum",
+        "text": "Lorem Ipsum"
+      }
+    }
+  }
+
+  /* TEST */
+
+  // "vtex.menu@2.x:menu#category-menu2": {
+  //   "props": {
+  //     "experimentalOptimizeRendering": true
+  //   },
+  //   "children": [
+  //     "menu-item#category2"
+  //   ]
+  // },
+  // "menu-item#category1": {
+  //   "props": {
+  //     "id": "Category1",
+  //     "type": "custom",
+  //     "iconId": null,
+  //     "highlight": false,
+  //     "itemProps": {
+  //       "type": "internal",
+  //       "href": "/tecnologia",
+  //       "noFollow": false,
+  //       "tagTitle": "Lorem Ipsum",
+  //       "text": "Lorem Ipsum"
+  //     }
+  //   },
+  //   "blocks": [
+  //     "rich-text#menutitle1",
+  //     "vtex.menu@2.x:menu#BlockMenuMobile1",
+  //     "rich-text#menutitle2",
+  //     "vtex.menu@2.x:menu#BlockMenuMobile2"
+  //   ]
+  // }
+}

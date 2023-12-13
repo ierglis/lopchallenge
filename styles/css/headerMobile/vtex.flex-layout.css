@@ -1,0 +1,88 @@
+.flexRow--mobileheader{
+    height: 105px;
+}
+
+.flexRow--main-header-mobile,
+.flexRow--mobileheader{
+    background-color: black;
+    align-items: center;
+}
+
+.flexRow--main-header-mobile{
+    margin: 5px 0;
+}
+
+.flexRowContent--main-header-mobile{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 !important;
+}
+
+.flexRowContent--mobileheader{
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 !important;
+    flex-direction: column;
+}
+
+.flexRowContent--main-header-mobile .stretchChildrenWidth{
+    width: 33% !important;
+}
+
+.flexRow--main-header-mobile :global(.vtex-store-drawer-0-x-menuIcon){
+    color: white;
+}
+
+.flexRowContent--main-header-mobile .flexRowContent--logincart{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+.flexRowContent--main-header-mobile .flexRowContent--logincart .stretchChildrenWidth{
+    width: 30px !important;
+}
+
+.flexRowContent--main-header-mobile .flexRowContent--logincart .stretchChildrenWidth:first-child{
+    margin-right: 15%;
+}
+
+@media (min-width: 640px){
+    .flexRow--mobileheader .stretchChildrenWidth{
+        width: 100% !important; 
+    }
+}
+
+
+/* header desktop */
+
+.flexRow--headermenu,
+.flexRow--headerfirstlevel{
+    background-color: black;
+}
+
+.flexRow--headermenu{
+    height: 40px;
+    border-top: 1px solid white;
+    display: flex; 
+    align-items: center;
+}
+
+.flexRowContent--headerfirstlevel{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (min-width: 1026px){
+    .flexRowContent--logincart{
+        justify-content: flex-end;
+    }
+    .flexRowContent--logincart .stretchChildrenWidth{
+        width: auto !important;
+    }
+}

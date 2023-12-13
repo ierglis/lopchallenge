@@ -1,0 +1,34 @@
+@media (max-width: 1025px) {
+    .openIconContainer {
+        padding: 0;
+    }
+
+    .openIconContainer :global(.vtex-button) {
+        width: 30px;
+        min-height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .openIconContainer :global(.vtex-button__label){
+        padding: 0 !important;
+    }
+}
+
+.openIconContainer :global(.vtex-button__label)::before {
+    content: '';
+    background-image: url(assets/header/cart.svg);
+    width: 25px;
+    height: 25px;
+    display: block;
+    margin: auto;
+    background-position: center;
+    color: white;
+    font-size: 25px;
+    background-repeat: no-repeat;
+}
+
+.minicartIconContainer{
+    display: none;
+}

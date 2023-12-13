@@ -1,133 +1,228 @@
 {
   "header": {
-    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+    "blocks": [
+      "header-layout.desktop",
+      "header-layout.mobile"
+    ]
   },
   "header.full": {
-    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+    "blocks": [
+      "header-layout.desktop",
+      "header-layout.mobile"
+    ]
   },
   "header-layout.desktop": {
     "children": [
-      "flex-layout.row#1-desktop",
-      "flex-layout.row#3-desktop",
-      "sticky-layout#4-desktop"
+      "flex-layout.row#header1",
+      "flex-layout.row#headermenu"
     ]
+  },
+  "flex-layout.row#header1": {
+    "props": {
+      "blockClass": "headerfirstlevel"
+    },
+    "children": [
+      "image#logoheader",
+      "search-bar#header",
+      "flex-layout.row#logincart"
+    ]
+  },
+  "login": {
+    "props": {
+      "iconLabel": "Mi cuenta"
+    }
+  },
+  "flex-layout.row#headermenu": {
+    "children": [
+      "vtex.menu@2.x:menu#category-menu",
+      "vtex.menu@2.x:menu#category-menu",
+      "vtex.menu@2.x:menu#category-menu",
+      "vtex.menu@2.x:menu#category-menu"
+    ],
+    "props": {
+      "blockClass": "headermenu"
+    }
   },
 
-  "flex-layout.row#1-desktop": {
-    "children": ["telemarketing"],
-    "props": {
-      "fullWidth": true
-    }
-  },
-  
-  "flex-layout.row#3-desktop": {
-    "props": {
-      "blockClass": "menu-link",
-      "horizontalAlign": "center",
-      "preventHorizontalStretch": true,
-      "preventVerticalStretch": true,
-      "fullWidth": true
-    },
-    "children": [
-      "vtex.menu@2.x:menu#websites",
-      "flex-layout.col#spacer",
-      "vtex.menu@2.x:menu#institutional"
-    ]
-  },
-  "flex-layout.col#spacer": {
-    "props": {
-      "width": "grow"
-    }
-  },
-  "sticky-layout#4-desktop": {
-    "props": {
-      "blockClass": "sticky-header"
-    },
-    "children": ["flex-layout.row#4-desktop"]
-  },
-  "flex-layout.row#4-desktop": {
-    "props": {
-      "blockClass": "main-header",
-      "horizontalAlign": "center",
-      "verticalAlign": "center",
-      "preventHorizontalStretch": true,
-      "preventVerticalStretch": true,
-      "fullWidth": true
-    },
-    "children": [
-      "flex-layout.col#logo-desktop",
-      "flex-layout.col#category-menu",
-      "flex-layout.col#spacer",
-      "search-bar",
-      "locale-switcher",
-      "login",
-      "minicart.v2"
-    ]
-  },
-  "flex-layout.col#logo-desktop": {
-    "props": {
-      "verticalAlign": "middle"
-    },
-    "children": ["logo#desktop"]
-  },
-  "flex-layout.col#category-menu": {
-    "props": {
-      "verticalAlign": "middle"
-    },
-    "children": ["vtex.menu@2.x:menu#category-menu"]
-  },
-  "logo#desktop": {
-    "props": {
-      "title": "Logo",
-      "href": "/",
-      "url": "https://storecomponents.vteximg.com.br/arquivos/store-theme-logo.png",
-      "width": "180",
-      "height": "12"
-    }
-  },
+
+  /* HEADER MOBILE */
   "header-layout.mobile": {
-    "children": ["sticky-layout#1-mobile"]
+    "children": [
+      "sticky-layout#1-mobile"
+    ]
   },
   "sticky-layout#1-mobile": {
-    "children": ["flex-layout.row#1-mobile"]
+    "children": [
+      "flex-layout.row#mobileheader"
+    ]
   },
-  "flex-layout.row#1-mobile": {
+  "flex-layout.row#mobileheader": {
+    "props": {
+      "blockClass": "mobileheader"
+    },
+    "children": [
+      "flex-layout.row#mobile1",
+      "search-bar#header"
+    ]
+  },
+  "flex-layout.row#mobile1": {
     "children": [
       "drawer",
-      "logo#mobile",
-      "flex-layout.col#spacer",
+      "image#logoheader",
+      "flex-layout.row#logincart"
+    ],
+    "props": {
+      "blockClass": "main-header-mobile"
+    }
+  },
+  "flex-layout.row#logincart": {
+    "children": [
       "login",
       "minicart.v2"
     ],
     "props": {
-      "blockClass": "main-header-mobile",
-      "preventHorizontalStretch": true,
-      "preserveLayoutOnMobile": true,
-      "fullWidth": true
+      "blockClass": "logincart"
+    }
+  },
+  "image#logoheader": {
+    "title": "Logo header",
+    "props": {
+      "src": "assets/header/logo.svg",
+      "blockClass": "logo",
+      "link": {
+        "url": "/"
+      }
     }
   },
   "drawer": {
-    "children": ["menu#drawer"]
+    "children": [
+      "menu#drawer"
+    ],
+    "blocks": [
+      "drawer-header#my-drawer"
+    ]
   },
-
   "menu#drawer": {
     "children": [
-      "menu-item#category-apparel",
-      "menu-item#category-home",
-      "menu-item#more"
-    ],
+      "rich-text#menutitle1",
+      "vtex.menu@2.x:menu#BlockMenuMobile1",
+      "rich-text#menutitle2",
+      "vtex.menu@2.x:menu#BlockMenuMobile2"
+    ]
+  },
+  "drawer-header#my-drawer": {
+    "children": [
+      "image#logoheader",
+      "drawer-close-button"
+    ]
+  },
+  "search-bar#header": {
     "props": {
-      "orientation": "vertical"
+      "placeholder": "¿Qué está buscando?",
+      "openAutocompleteOnFocus": true,
+      "containerMode": "overlay"
     }
   },
-
-  "logo#mobile": {
+  "rich-text#menutitle1": {
+    "title": "Menu title 1",
     "props": {
-      "title": "Logo",
-      "href": "/",
-      "url": "https://storecomponents.vteximg.com.br/arquivos/store-theme-logo-mobile.png",
-      "width": "77.5",
-      "height": "27.5"
+      "text": "Lorem Ipsum",
+      "blockClass": "mobilemenutitle"
+    }
+  },
+  "vtex.menu@2.x:menu#BlockMenuMobile1": {
+    "title": "Menu mobile 1",
+    "props": {
+      "blockClass": "menuListaCategoryMobile",
+      "items": [
+        {
+          "id": "menu-item-1",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/tecnologia",
+            "noFollow": false,
+            "tagTitle": "Lorem Ipsum",
+            "text": "Lorem Ipsum"
+          }
+        },
+        {
+          "id": "menu-item-2",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/tecnologia",
+            "noFollow": false,
+            "tagTitle": "Lorem Ipsum",
+            "text": "Lorem Ipsum"
+          }
+        },
+        {
+          "id": "menu-item-3",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/tecnologia",
+            "noFollow": false,
+            "tagTitle": "Lorem Ipsum",
+            "text": "Lorem Ipsum"
+          }
+        }
+      ]
+    }
+  },
+  "rich-text#menutitle2": {
+    "title": "Menu title 2",
+    "props": {
+      "text": "Lorem Ipsum",
+      "blockClass": "mobilemenutitle"
+    }
+  },
+  "vtex.menu@2.x:menu#BlockMenuMobile2": {
+    "title": "Menu mobile 2",
+    "props": {
+      "blockClass": "menuListaCategoryMobile",
+      "items": [
+        {
+          "id": "menu-item-4",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/tecnologia",
+            "noFollow": false,
+            "tagTitle": "Lorem Ipsum",
+            "text": "Lorem Ipsum"
+          }
+        },
+        {
+          "id": "menu-item-5",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/tecnologia",
+            "noFollow": false,
+            "tagTitle": "Lorem Ipsum",
+            "text": "Lorem Ipsum"
+          }
+        },
+        {
+          "id": "menu-item-6",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/tecnologia",
+            "noFollow": false,
+            "tagTitle": "Lorem Ipsum",
+            "text": "Lorem Ipsum"
+          }
+        }
+      ]
     }
   }
 }
