@@ -1,0 +1,39 @@
+.containerNormal--shelf{
+    border-radius: 0;
+}
+
+.element--shelf {
+    padding: 0;
+}
+
+.element--shelf .nameContainer {
+    padding-top: 0;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.element--shelf .brandName {
+    letter-spacing: 0px;
+    color: #2B2D38;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+@media (max-width: 639px){
+    .element--shelf .brandName{
+        font-size: 12px;
+    }
+}
+
+.element--shelf :global(.vtex-store-components-3-x-priceContainer){
+    padding: 0 5px 0 5px;
+}
+.element--shelf :global(.vtex-store-components-3-x-listPriceLabel),
+.element--shelf :global(.vtex-store-components-3-x-sellingPriceLabel){
+    display: none;
+}
+
+.element--shelf .brandName,
+.element--shelf :global(.vtex-store-components-3-x-currencyContainer){
+    color: #2B2D38;
+}

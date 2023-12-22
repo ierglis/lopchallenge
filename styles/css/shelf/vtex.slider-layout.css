@@ -1,0 +1,51 @@
+.sliderLayoutContainer--shelf-home{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.slide--shelf-home{
+    margin: 0 7px 0 7px;
+    border: 1px solid #787878;
+    background-color: #F3F3F3;
+}
+
+.sliderArrows--shelf-home{
+    padding: 0;
+}
+
+.sliderLeftArrow--shelf-home{
+    left: -55px;
+}
+
+.sliderRightArrow--shelf-home{
+    right: -55px;
+}
+
+@media (max-width: 1025px){
+    .paginationDot--shelf-home--isActive{
+        background-color: #233655 !important;
+    }
+    .paginationDot--shelf-home{
+        border: 1px solid #233655;
+        background-color: white;
+    }
+
+    .paginationDotsContainer--shelf-home{
+        bottom: -35px;
+    }
+    
+    .sliderArrows--shelf-home{
+        padding: 0;
+        margin: 0;
+        width: 15px;
+        height: 15px;
+    }
+
+    .sliderLeftArrow--shelf-home{
+        left: -10px;
+    }
+
+    .sliderRightArrow--shelf-home{
+        right: -10px;
+    }
+}

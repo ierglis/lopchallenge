@@ -1,0 +1,99 @@
+{
+    "flex-layout.row#shelf": {
+        "title": "Listado Productos",
+        "children": [
+            "rich-text#shelftitle",
+            "list-context.product-list#shelf"
+        ],
+        "props": {
+            "blockClass": "shelf"
+        }
+    },
+    "rich-text#shelftitle": {
+        "title": "Shelf title",
+        "props": {
+            "blockClass": "shelftitle",
+            "text": "Lorem ipsum"
+        }
+    },
+    "list-context.product-list#shelf": {
+        "title": "Listado Productos",
+        "blocks": [
+            "product-summary.shelf#home"
+        ],
+        "children": [
+            "slider-layout#shelf"
+        ],
+        "props": {
+            "orderBy": "OrderByBestDiscountDESC"
+        }
+    },
+    "slider-layout#shelf": {
+        "title": "Carrusel Productos",
+        "props": {
+            "itemsPerPage": {
+                "desktop": 5,
+                "tablet": 3,
+                "phone": 2
+            },
+            "infinite": true,
+            "fullWidth": false,
+            "showNavigationArrows": "always",
+            "showPaginationDots": "mobileOnly",
+            "autoplay": {
+                "timeout": 3000,
+                "stopOnHover": true
+            },
+            "blockClass": "shelf-home"
+        }
+    },
+    "product-summary.shelf#home": {
+        "children": [
+            "flex-layout.col#imgname",
+            "flex-layout.col#prices"
+        ],
+        "props": {
+            "collection": "All",
+            "blockClass": "shelf"
+        }
+    },
+
+    "flex-layout.col#imgname": {
+        "children": [
+            "product-summary-image#shelf",
+            "product-summary-name"
+        ],
+        "props": {
+            "blockClass":"imgname"
+        }
+    },
+
+    "flex-layout.col#prices": {
+        "children": [
+            "product-list-price",
+            "flex-layout.row#pricediscount",
+            "product-installments"
+        ],
+        "props": {
+            "blockClass":"prices"
+        }
+    },
+
+    "flex-layout.row#pricediscount": {
+        "children": [
+            "product-selling-price",
+            "product-price-savings"
+        ]
+    },
+
+    "product-summary-image#shelf": {
+        "props": {
+            "showBadge": true,
+            "aspectRatio": "1:1",
+            "maxHeight": 218
+        }
+    },
+    "product-selling-price#test":{
+        "title": "Envio gratis"
+    }
+}

@@ -3,7 +3,8 @@
     "blocks": [
       "responsive-layout.mobile#bannerslider",
       "responsive-layout.desktop",
-      "flex-layout.row#infocardstwobanners"
+      "flex-layout.row#infocardstwobanners",
+      "flex-layout.row#shelf"
     ]
   }
 }

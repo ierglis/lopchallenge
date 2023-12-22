@@ -20,7 +20,7 @@
     left: 0;
     top: 0;
     width: 100%;
-    height: 98%;
+    height: 99%;
     background: transparent linear-gradient(180deg, #FFFFFF00 0%, #00000000 49%, #000000C2 100%) 0% 0% no-repeat padding-box; 
 }
 
@@ -30,7 +30,7 @@
     left: 0;
     top: 0;
     width: 100%;
-    height: 98%;
+    height: 99%;
     background: transparent linear-gradient(180deg, #FFFFFF00 0%, #00000000 49%, #000000C2 100%) 0% 0% no-repeat padding-box; 
 }
 
@@ -78,6 +78,6 @@
 
     .infoCardCallActionContainer--twobanners{
         width: 99%;
-        height: 98%;
+        height: 99%;
     }
 }

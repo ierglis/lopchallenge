@@ -1,0 +1,17 @@
+.paragraph--shelftitle{
+    color: #2B2D38;
+    font-size: 33px;
+    margin-left: 5px;
+}
+
+@media (max-width: 1025px){
+    .paragraph--shelftitle{
+        margin: 0 0 15px 0;
+        color: #485A64;
+        font-size: 27px;
+    }
+
+    .container--shelftitle{
+        justify-content: center;
+    }
+}

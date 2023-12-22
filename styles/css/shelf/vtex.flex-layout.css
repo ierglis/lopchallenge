@@ -1,0 +1,85 @@
+.flexRow--shelf{
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.flexRow--shelf :global(.vtex-store-components-3-x-container){
+    max-width: 1150px;
+    padding: 0;
+}
+
+@media (max-width: 1250px){
+    .flexRow--shelf :global(.vtex-store-components-3-x-container){
+        max-width: 90%;
+    }
+}
+
+.flexColChild:empty{
+    display: none;
+}
+
+.flexCol--prices{
+    justify-content: flex-end;
+}
+
+.flexColChild--prices{
+    height: auto !important;
+    padding: 0 5px 0 5px;
+    display: flex;
+    align-items: center;
+}
+
+.flexColChild--prices .flexRowContent{
+    display: flex;
+    flex-direction: row;
+}
+
+.flexColChild--prices .flexRowContent .stretchChildrenWidth{
+    width: auto !important;
+    display: flex;
+    align-items: center;
+}
+
+.flexColChild--prices .flexRowContent .stretchChildrenWidth :global(.vtex-product-price-1-x-currencyContainer){
+    font-size: 22px;
+}
+
+.flexColChild--prices :global(.vtex-product-price-1-x-installments){
+    font-size: 14px;
+    margin: 5px 0 5px 0;
+}
+
+@media (max-width: 639px){
+    .flexColChild--prices .flexRowContent .stretchChildrenWidth :global(.vtex-product-price-1-x-currencyContainer){
+        font-size: 16px;
+    }
+
+    .flexCol--prices :global(.vtex-product-price-1-x-listPriceValue) :global(.vtex-product-price-1-x-currencyContainer){
+        font-size: 14px;
+    }
+
+    .flexColChild--prices :global(.vtex-product-price-1-x-installments){
+        font-size: 11px;
+        margin: 3px 0 5px 0;
+    }
+}
+
+.flexColChild--prices .flexRowContent .stretchChildrenWidth :global(.vtex-product-price-1-x-savings){
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    height: 15px;
+    color: white;
+    background-color: #233655;
+    padding: 2px 6px 2px 6px;
+    font-size: 12px;
+    letter-spacing: 0.44px;
+}
+
+.flexRowContent--shelf{
+    flex-direction: column;
+}
+
+.flexRowContent--shelf .stretchChildrenWidth{
+    width: 100% !important;
+}
